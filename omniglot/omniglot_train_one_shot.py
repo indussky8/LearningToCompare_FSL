@@ -234,7 +234,7 @@ def main():
 
                 _,predict_labels = torch.max(relations.data,1)
                 predict_labels=predict_labels.cuda()
-                CLASS_NUM=CLASS_NUM.cuda()
+                # CLASS_NUM=CLASS_NUM.cuda()
                 test_labels=test_labels.cuda()
 
                 rewards = [1 if predict_labels[j]==test_labels[j] else 0 for j in range(CLASS_NUM)]
